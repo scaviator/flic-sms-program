@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Personal Smart-Button SMS Alerts – Program Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal, low-volume SMS alerts for family, triggered by a Flic smart button." />
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; line-height: 1.6; }
+    header, main, footer { max-width: 720px; margin: 0 auto; padding: 24px; }
+    header { background: #f5f5f7; border-bottom: 1px solid #e5e5e7; }
+    h1 { margin: 0 0 8px; font-size: 1.5rem; }
+    h2 { margin-top: 24px; font-size: 1.1rem; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    ul { padding-left: 20px; }
+    footer { font-size: 0.9rem; color: #666; }
+    @media (prefers-color-scheme: dark) {
+      header { background: #1f1f21; border-color: #2a2a2c; }
+      code { background: #2a2a2c; }
+      footer { color: #aaa; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Personal Smart-Button SMS Alerts</h1>
+    <p>Program description for toll-free messaging verification.</p>
+  </header>
+
+  <main>
+    <h2>Purpose</h2>
+    <p>
+      This is a private, non-commercial alerting tool that sends a low volume of SMS notifications when a
+      Flic smart button is pressed. Typical volume is a few messages per week.
+    </p>
+
+    <h2>Recipients (Closed List)</h2>
+    <p>
+      Messages are sent only to the program owner and a small set of family members/friends.
+      Phone numbers are manually added and managed by the owner; there is no public signup.
+    </p>
+
+    <h2>Opt-In (Consent)</h2>
+    <p>
+      Each recipient has explicitly consented to receive these alerts. Consent is collected directly (verbal and confirmed via text),
+      and numbers are added manually by the owner. No third-party lists are used.
+    </p>
+
+    <h2>Message Frequency</h2>
+    <p>A few messages per week at most; no marketing or promotional content.</p>
+
+    <h2>Sample Messages</h2>
+    <ul>
+      <li><code>Alert:</code> The button was pressed. Please check in.</li>
+      <li><code>Test:</code> This is a system check from the smart button.</li>
+      <li><code>Emergency:</code> Assistance requested.</li>
+    </ul>
+
+    <h2>Opt-Out / Help</h2>
+    <p>
+      Recipients can reply <strong>STOP</strong> to stop all messages. Reply <strong>HELP</strong> for help or more information.
+      These keywords are honored automatically by the messaging provider.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Program owner: <strong>[Your Name]</strong><br />
+      Email: <a href="mailto:you@example.com">you@example.com</a><br />
+      (Optional) Website/Profile: <a href="https://example.com" target="_blank" rel="noopener">https://example.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="updated"></span></p>
+  </footer>
+
+  <script>
+    // Auto-fill today's date for “Last updated”
+    document.getElementById("updated").textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>
